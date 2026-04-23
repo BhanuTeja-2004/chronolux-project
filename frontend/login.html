@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChronoLux — Login</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ChronoLux</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#collection">Collection</a></li>
+      <li><a href="login.html" class="active">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- LOGIN SECTION -->
+<section class="hero" style="height: 100vh; display:flex; align-items:center; justify-content:center;">
+
+  <div class="modal" style="display:block; position:relative; max-width:400px; width:100%; z-index:10;">
+
+    <h2 class="modal-title">Welcome Back</h2>
+    <p class="modal-sub">Login to your account</p>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="Email" />
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Password" />
+    </div>
+
+    <!-- ✅ BUTTON FIXED -->
+    <button id="loginBtn" class="btn btn-primary full" type="button">
+      Login
+    </button>
+
+    <p class="modal-switch">
+      Don't have an account? <a href="register.html">Register</a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ✅ IMPORTANT: Load JS AFTER HTML -->
+<script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChronoLux — Premium Watch Collection</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">ChronoLux</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#collection" class="nav-link">Collection</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
+        <li><a href="register.html" class="nav-link">Register</a></li>
+        <li><a href="#" class="nav-link nav-account">Account</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Est. 1924 · Geneva, Switzerland</span>
+      <h1 class="hero-heading">
+        <span class="line">Premium</span>
+        <span class="line italic">Watches</span>
+        <span class="line">Collection</span>
+      </h1>
+      <p class="hero-sub">Timeless craftsmanship. Engineered for those who measure life in moments, not minutes.</p>
+      <div class="hero-actions">
+        <a href="#collection" class="btn btn-primary">Explore Collection</a>
+        <a href="#" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Swiss Movement</span><span class="dot">·</span>
+      <span>Sapphire Crystal</span><span class="dot">·</span>
+      <span>Water Resistant</span><span class="dot">·</span>
+      <span>Lifetime Warranty</span><span class="dot">·</span>
+      <span>Free Shipping</span><span class="dot">·</span>
+      <span>Swiss Movement</span><span class="dot">·</span>
+      <span>Sapphire Crystal</span><span class="dot">·</span>
+      <span>Water Resistant</span><span class="dot">·</span>
+      <span>Lifetime Warranty</span><span class="dot">·</span>
+      <span>Free Shipping</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- COLLECTION -->
+  <section class="collection" id="collection">
+    <div class="section-header">
+      <span class="section-label">Our Timepieces</span>
+      <h2 class="section-title">Curated for the <em>Discerning</em></h2>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="classic">Classic</button>
+      <button class="filter-btn" data-filter="sport">Sport</button>
+      <button class="filter-btn" data-filter="luxury">Luxury</button>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+      <div class="product-card" data-category="classic">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&q=80" alt="Orion Classic" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+          <span class="card-badge">Bestseller</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Classic</span>
+            <span class="card-rating">★★★★★</span>
+          </div>
+          <h3 class="card-name">Orion Classic</h3>
+          <p class="card-desc">Stainless steel case · Brown leather strap · Automatic movement</p>
+          <div class="card-footer">
+            <span class="card-price">$1,290</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Orion Classic', 1290)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="luxury">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400&q=80" alt="Aureus Gold" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+          <span class="card-badge new">New</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Luxury</span>
+            <span class="card-rating">★★★★★</span>
+          </div>
+          <h3 class="card-name">Aureus Gold</h3>
+          <p class="card-desc">18k gold plating · Moonphase complication · Sapphire crystal</p>
+          <div class="card-footer">
+            <span class="card-price">$4,850</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Aureus Gold', 4850)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="sport">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=400&q=80" alt="Apex Diver" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Sport</span>
+            <span class="card-rating">★★★★☆</span>
+          </div>
+          <h3 class="card-name">Apex Diver</h3>
+          <p class="card-desc">300m water resistant · Helium escape valve · Rubber strap</p>
+          <div class="card-footer">
+            <span class="card-price">$2,190</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Apex Diver', 2190)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="classic">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80" alt="Solstice Slim" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Classic</span>
+            <span class="card-rating">★★★★★</span>
+          </div>
+          <h3 class="card-name">Solstice Slim</h3>
+          <p class="card-desc">Ultra-thin 5.9mm profile · Silver dial · Italian leather strap</p>
+          <div class="card-footer">
+            <span class="card-price">$1,780</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Solstice Slim', 1780)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="luxury">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=400&q=80" alt="Noir Tourbillon" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+          <span class="card-badge limited">Limited</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Luxury</span>
+            <span class="card-rating">★★★★★</span>
+          </div>
+          <h3 class="card-name">Noir Tourbillon</h3>
+          <p class="card-desc">Flying tourbillon · Black PVD case · Skeleton dial</p>
+          <div class="card-footer">
+            <span class="card-price">$9,400</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Noir Tourbillon', 9400)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="sport">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=400&q=80" alt="Meridian GMT" />
+          <div class="card-overlay">
+            <button class="btn-quick">Quick View</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category">Sport</span>
+            <span class="card-rating">★★★★☆</span>
+          </div>
+          <h3 class="card-name">Meridian GMT</h3>
+          <p class="card-desc">Dual timezone · Ceramic bezel · Jubilee bracelet</p>
+          <div class="card-footer">
+            <span class="card-price">$3,350</span>
+            <button class="btn btn-buy" onclick="addToCart(this, 'Meridian GMT', 3350)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">⌚</div>
+      <h4>Swiss Movements</h4>
+      <p>Every piece certified by COSC for precision and reliability</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🛡</div>
+      <h4>Lifetime Warranty</h4>
+      <p>Full coverage on movement and craftsmanship, forever</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📦</div>
+      <h4>Free Shipping</h4>
+      <p>Complimentary insured delivery worldwide, within 48 hours</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">↩</div>
+      <h4>30-Day Returns</h4>
+      <p>Hassle-free returns, no questions asked</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">ChronoLux</span>
+        <p>Crafting moments since 1924.<br/>Geneva · New York · Tokyo</p>
+      </div>
+      <div class="footer-links">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Limited Editions</a></li>
+          <li><a href="#">Gift Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h5>Stay in Time</h5>
+        <p>Subscribe for exclusive drops and horological insights.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button>→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 TEMPVS. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART TOAST -->
+  <div class="cart-toast" id="cartToast">
+    <span id="cartToastMsg">Added to cart!</span>
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="loginModal" onclick="closeModalOutside(event, 'loginModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+      <h2 class="modal-title">Welcome Back</h2>
+      <p class="modal-sub">Sign in to your TEMPVS account</p>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" />
+      </div>
+      <button class="btn btn-primary full">Sign In</button>
+      <p class="modal-switch">Don't have an account? <a href="#" onclick="switchModal('loginModal','registerModal')">Register</a></p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="registerModal" onclick="closeModalOutside(event, 'registerModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('registerModal')">✕</button>
+      <h2 class="modal-title">Join TEMPVS</h2>
+      <p class="modal-sub">Create your account</p>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="James Horton" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" />
+      </div>
+      <button class="btn btn-primary full">Create Account</button>
+      <p class="modal-switch">Already a member? <a href="#" onclick="switchModal('registerModal','loginModal')">Login</a></p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="accountModal" onclick="closeModalOutside(event, 'accountModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('accountModal')">✕</button>
+      <h2 class="modal-title">My Account</h2>
+      <div class="account-grid">
+        <div class="account-item">
+          <div class="account-icon">📦</div>
+          <span>Orders</span>
+        </div>
+        <div class="account-item">
+          <div class="account-icon">❤️</div>
+          <span>Wishlist</span>
+        </div>
+        <div class="account-item">
+          <div class="account-icon">⚙️</div>
+          <span>Settings</span>
+        </div>
+        <div class="account-item">
+          <div class="account-icon">🔔</div>
+          <span>Alerts</span>
+        </div>
+      </div>
+      <button class="btn btn-ghost full" style="margin-top:1.5rem">Sign Out</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
